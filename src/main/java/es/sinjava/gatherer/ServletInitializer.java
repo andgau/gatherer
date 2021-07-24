@@ -1,4 +1,4 @@
-package es.sinjava.recolector;
+package es.sinjava.gatherer;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

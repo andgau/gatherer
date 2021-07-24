@@ -1,4 +1,4 @@
-package es.sinjava.recolector;
+package es.sinjava.gatherer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
