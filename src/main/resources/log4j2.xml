@@ -3,7 +3,7 @@
 	<Appenders>
 		<Console name="Console" target="SYSTEM_OUT">
 			<PatternLayout
-				pattern="STARTING | %-5p | %d | %10.10t | %C{1.} | %m%n" />
+				pattern=" %-5p | %d | %10.10t | %C{1.} | %m%n" />
 		</Console>
 		<RollingFile name="RollingFile"
 			fileName="./logs/app/card_core/card_core.log"
@@ -19,13 +19,13 @@
 		</RollingFile>
 	</Appenders>
 	<Loggers>
-		<!-- LOG everything at INFO level -->
+	
 		<Root level="warn">
 			<AppenderRef ref="RollingFile" />
-		    <AppenderRef ref="Console" level="debug"/> 
+		    <AppenderRef ref="Console" level="info"/> 
 		</Root>
 		
-		<Logger name="es.sinjava" level="debug" additivity="true">
+		<Logger name="es.sinjava" level="debug" additivity="false">
 			<AppenderRef ref="RollingFile" level="debug" />
 			<AppenderRef ref="Console" level="debug" />
 		</Logger>
