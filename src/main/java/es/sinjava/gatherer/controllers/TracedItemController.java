@@ -23,7 +23,7 @@ import lombok.extern.log4j.Log4j2;
 public class TracedItemController {
 
 	private TracedItemService tracedItemService;
-	
+
 	private static final ModelMapper modelMapper = new ModelMapper();
 
 	@GetMapping("/home/{name}")
@@ -37,6 +37,13 @@ public class TracedItemController {
 		log.debug("TracedItemController {} byId", id);
 		Optional<TracedItem> item = tracedItemService.findById(id);
 		return ResponseEntity.of(item);
+	}
+
+	@GetMapping("/trace")
+	public ResponseEntity<?> all() {
+		log.debug("TracedItemController {} byId");
+		Iterable<TracedItem> item = tracedItemService.findAll();
+		return ResponseEntity.ok(item);
 	}
 
 	@PostMapping("/trace")

@@ -18,37 +18,37 @@ public abstract class BaseServiceImpl<T, ID, R extends CrudRepository<T, ID>> im
 
 	@Override
 	public T save(T t) {
-		log.debug("Save entity  {} ", t.getClass());
+		log.trace("Save entity  {} ", t.getClass());
 		return repositorio.save(t);
 	}
 
 	@Override
 	public Optional<T> findById(ID id) {
-		log.debug("Find entity  {} ", id);
+		log.trace("Find entity  {} ", id);
 		return repositorio.findById(id);
 	}
 
 	@Override
 	public Iterable<T> findAll() {
-		log.debug("Find All ");
+		log.trace("Find All ");
 		return repositorio.findAll();
 	}
 
 	@Override
 	public T edit(T t) {
-		log.debug("Update entity  {}", t.getClass());
+		log.trace("Update entity  {}", t.getClass());
 		return repositorio.save(t);
 	}
 
 	@Override
 	public void delete(T t) {
-		log.debug("Delete entity  {}", t.getClass());
+		log.trace("Delete entity  {}", t.getClass());
 		repositorio.delete(t);
 	}
 
 	@Override
 	public void deleteById(ID id) {
-		log.debug("Delete entity by Id  {}", id);
+		log.trace("Delete entity by Id  {}", id);
 		repositorio.deleteById(id);
 	}
 
